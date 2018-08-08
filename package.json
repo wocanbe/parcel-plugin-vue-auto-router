@@ -1,0 +1,29 @@
+{
+  "name": "parcel-plugin-vue-auto-router",
+  "version": "0.0.1",
+  "description": "parcel plugin for vue",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wocanbe/parcel-plugin-vue-auto-router.git"
+  },
+  "author": "liuying",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wocanbe/parcel-plugin-vue-auto-router/issues"
+  },
+  "homepage": "https://github.com/wocanbe/parcel-plugin-vue-auto-router#readme",
+  "dependencies": {
+    "babylon": "^6.18.0",
+    "hash-sum": "^1.0.2"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.4"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.4.1"
+  }
+}
