@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-vue-auto-router",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "parcel plugin for vue",
   "main": "index.js",
   "repository": {
@@ -9,7 +9,7 @@
   },
   "author": "wocanbe@163.com",
   "license": "ISC",
-  "keyword": ["parcel plugin","vue","vue-router","auto-router"],
+  "keywords": ["parcel plugin","vue","vue-router","auto-router"],
   "bugs": {
     "url": "https://github.com/wocanbe/parcel-plugin-vue-auto-router/issues"
   },
