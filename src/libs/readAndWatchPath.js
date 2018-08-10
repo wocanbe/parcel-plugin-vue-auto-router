@@ -21,7 +21,7 @@ function readPath (path, options) {
     hasUrlParam: false, // 拥有文件类型地址参数
     hasPathAll: false, // 拥有目录类型地址参数
     files: [], // 文件列表
-    dirs: {} // 目录列表
+    dirs: {}, // 目录列表
   }
   let hasUrlParamPath = false // 已经拥有_开头的目录
   result.hasAuth = fs.existsSync(path + '/extendRouter.js')

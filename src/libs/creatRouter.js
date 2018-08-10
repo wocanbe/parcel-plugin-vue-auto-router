@@ -98,14 +98,14 @@ function creatRouters(options) {
 
     let needIndex = true
     if (pathMS.hasUrlParam) needIndex = false
-
-    router.children = router.children.concat(creatRouters({
+    const childNode = creatRouters({
       routerPath: pathParams,
       dirPath: dirPath + '/' + key,
       chunkName,
       needIndex,
       files: pathMS.dirs[key]
-    }))
+    })
+    router.children = router.children.concat(childNode)
   }
   // 处理*号的地址栏参数
   if (pathMS.hasPathAll) {
