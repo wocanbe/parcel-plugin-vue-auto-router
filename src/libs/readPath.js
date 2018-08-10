@@ -1,6 +1,4 @@
 const path = require('path')
-const _ = require('lodash')
-const hash = require('hash-sum')
 let fs = require('fs')
 const compileRouter = require('./compile')
 

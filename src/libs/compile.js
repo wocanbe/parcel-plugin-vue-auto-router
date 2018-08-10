@@ -1,6 +1,6 @@
 const path = require('path')
 let fs = require('fs')
-const _ = require('lodash')
+const template = require('lodash/template')
 const hash = require('hash-sum')
 let dependents = []
 let files = []
@@ -48,15 +48,15 @@ function compile(router, spaceNo, authObj) {
   return routerStr
 }
 function compileRouter (routers) {
-  files = []
+  files = ['import extend from \'lodash/extend\'']
   dependents = []
   const routerStr = compile(routers, 0, undefined)
 
   // 编译路由
   const templateFilePath = path.resolve(__dirname, 'template.js')
   const fileContent = fs.readFileSync(templateFilePath, 'utf8')
-  const template = _.template(fileContent)
-  const router = template({
+  const tempCompile = template(fileContent)
+  const router = tempCompile({
     files,
     routerStr
   })

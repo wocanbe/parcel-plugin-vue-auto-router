@@ -11,7 +11,7 @@ function creatRouters(options) {
   const chunkName = pathMS.asyncDir ? hash(xdPath) : options.chunkName
   let filterPath = ''
   if (pathMS.hasAuth) {
-    filterPath = xdPath + '/filter.js'
+    filterPath = xdPath + '/extendRouter.js'
   }
 
   if (pathMS.hasMain) { // 如果拥有主入口
@@ -51,7 +51,7 @@ function creatRouters(options) {
         dirPath: dirPath,
         component: indexPath
       })
-    } else { // 为了能正确拦截到filter.js配置的首页权限，这个必须加
+    } else { // 为了能正确拦截到extendRouter.js配置的首页权限，这个必须加
       router.children.push({
         path: ''
       })
