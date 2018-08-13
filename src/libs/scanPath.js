@@ -1,6 +1,5 @@
 const path = require('path')
 let fs = require('fs')
-const compileRouter = require('./compile')
 
 const REGEX_VALIDATE_PAGE = /^[$]?[\w-]+\.vue$/i
 const REGEX_MODULE_ENTER = /^main\.vue$/i
@@ -12,7 +11,7 @@ const IGNORES = ['_', '$_', '_$', '$_.vue', '_$.vue'] // 要跳过不处理的�
  * @param {String} path 要扫描的目录
  * @param {*} options 附加配置，目前仅支持忽略该目录配置
  */
-function readPath (path, options) {
+function scanPath (path, options) {
   const result = {
     hasMain: false, // 拥有入口文件
     asyncDir: false, // 本目录进行分包且打成一个包
@@ -41,7 +40,7 @@ function readPath (path, options) {
       }
 
       // 对目录进行处理
-      const childFiles = readPath(fpath, options)
+      const childFiles = scanPath(fpath, options)
       if (childFiles) {
         result.dirs[fname] = childFiles
         result.hasDir = true
@@ -75,4 +74,4 @@ function readPath (path, options) {
   }
 }
 
-module.exports = readPath
+module.exports = scanPath
