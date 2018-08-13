@@ -35,6 +35,8 @@ autorouter文件支持两个参数
  - dirPath: 要扫描的文件夹，必填
  - ignore: 不扫描的文件夹名称，默认值['assets', 'components']
 
+ 该插件会在同一目录下生成同名js文件
+
 ## 特殊文件约定
 
   - main.vue：主入口，可选
